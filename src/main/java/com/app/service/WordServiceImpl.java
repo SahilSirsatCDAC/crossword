@@ -24,6 +24,7 @@ public class WordServiceImpl implements IWordService {
 	public List<Word> findByCrosswordId(long crosswordId) {
 		List<WordEntity> words = wordRepo.findByCrosswordCrosswordId(crosswordId);
 		return words.stream().map(word -> mapper.map(word, Word.class)).collect(Collectors.toList());
+		//Important comment
 	}
 
 }
