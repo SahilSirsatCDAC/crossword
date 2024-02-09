@@ -1,0 +1,70 @@
+user------->  userId(Auto) | email | password -------> PK   email
+
+
+userHistory ----> need to save list of completed and ongoing crosswords
+	    ----> userId | crosswordId | status(Completed/Ongoing)
+
+
+userProgress ----> Storing users progress in case crossword is ongoing. We only save the correct words.
+	     ----> userId | crosswordId | wordId
+
+crossword   ----> crosswordId(Auto) | crosswordName | crosswordCategory | crosswordSize | crosswordDifficulty
+
+word        ----> wordId(Auto) | crosswordId | orientation | startRow | startColumn | size | word | hint
+
+
+
+
+
+
+
+user -> logged in -> sees various categories of cw -> maybe decides to filter based on difficulty or size.
+
+
+                    
+Picks a new crossword two possibilities
+1. Finishes and logs out and leaves
+	No further cases to discuss
+2. Saves incomplete, logs out and leaves
+	a. Have 
+
+
+
+
+SCREENS:
+```````
+1. Register
+2. Login
+3. Landing (categories and filter options)
+4. User profile page with completed and in progress crosswords list
+5. Crossword page where actual action will happen. Must have a hint button which will reveal a letter that is being clicked, check progress button that will highlight all the correct words, and a save button which wil save all the correct words.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
