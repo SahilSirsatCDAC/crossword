@@ -10,4 +10,6 @@ import com.app.entities.CrosswordEntity;
 
 public interface CrosswordRepository extends PagingAndSortingRepository<CrosswordEntity, Long> {
 	Page<CrosswordEntity> findAll(Pageable pageable);
+
+	CrosswordEntity findByCrosswordId(Long crosswordId);
 }

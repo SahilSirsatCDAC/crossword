@@ -54,9 +54,9 @@ public class UserDTO {
 	@JsonProperty(access = Access.WRITE_ONLY)
 	private String password;
 	
-	// many-to-many , User *--->* Role
-//	@NotEmpty(message = "Please select at least one role")
-//	@JsonProperty(access = Access.WRITE_ONLY)
-//	private Set<UserRole> roles = new HashSet<>();
+//	 many-to-many , User *--->* Role
+	@NotEmpty(message = "Please select at least one role")
+	@JsonProperty(access = Access.WRITE_ONLY)
+	private Set<UserRole> roles = new HashSet<>();
 
 }

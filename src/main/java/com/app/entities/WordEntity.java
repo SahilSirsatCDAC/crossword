@@ -26,7 +26,7 @@ import lombok.Setter;
 public class WordEntity{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public long word_id;
+	public long wordId;
 	
 	@Column(length = 50, nullable = false)
 	private String orientation;//TODO create enum, for now we will pass either V or H

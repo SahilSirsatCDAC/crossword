@@ -21,7 +21,7 @@ import com.app.service.IUserService;
 
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/auth")
 @Slf4j

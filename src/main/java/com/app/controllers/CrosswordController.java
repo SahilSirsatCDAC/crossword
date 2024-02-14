@@ -14,7 +14,7 @@ import com.app.service.ICrosswordService;
 
 import lombok.extern.slf4j.Slf4j;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/crossword")
 @Slf4j

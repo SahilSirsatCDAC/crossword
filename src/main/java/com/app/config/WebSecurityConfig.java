@@ -52,7 +52,7 @@ public class WebSecurityConfig {
 		.requestMatchers(HttpMethod.POST, "/building/**", "/room/inbuilding/**", "/bed/inroom/**").hasRole("OWNER")
 		.requestMatchers(HttpMethod.POST, "/booking/bed/**").hasAnyRole("ADMIN", "USER", "OWNER")
 
-		.requestMatchers(HttpMethod.PUT, "/user/**").hasRole("USER")
+//		.requestMatchers(HttpMethod.PUT, "/user/**").hasRole("USER")
 		
 		.requestMatchers(HttpMethod.GET, "/address/**", "/user/users").hasRole("ADMIN")
 		.requestMatchers(HttpMethod.GET, "/booking/userBookings/**", "/image/user/**").hasRole("USER")
@@ -62,7 +62,7 @@ public class WebSecurityConfig {
 		
 //		.requestMatchers("/auth/**", "/swagger*/**", "/v*/api-docs/**").permitAll()
 		.requestMatchers(HttpMethod.OPTIONS).permitAll()
-		.requestMatchers("/word/**","/crossword/**","/auth/**", "/swagger*/**", "/v*/api-docs/**").permitAll()
+		.requestMatchers("/word/**","/crossword/**","/auth/**","/user/**", "/swagger*/**", "/v*/api-docs/**").permitAll()
 		.anyRequest().authenticated().
 		and().
 		sessionManagement()

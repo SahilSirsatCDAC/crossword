@@ -28,7 +28,7 @@ import lombok.ToString;
 @ToString
 public class Word {
 	@JsonProperty(access = Access.READ_ONLY)
-	public long word_id;
+	public long wordId;
 
 	@NotNull(message = "Room rent is required")
 	private String orientation;// TODO create enum, for now we will pass either V or H

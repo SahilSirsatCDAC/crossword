@@ -52,4 +52,10 @@ public class UserServiceImpl implements IUserService {
 		return new UserRegResponse("User registered successfully with ID " + persistentUser.getId());
 	}
 
+	@Override
+	public User getUserById(Integer userId) {
+		Optional<UserEntity> user = userRepo.findById(userId);
+		return mapper.map(user, User.class);
+	}
+
 }
