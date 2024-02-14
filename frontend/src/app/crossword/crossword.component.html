@@ -1,0 +1,17 @@
+<div class="container-fluid" style="height: 100vh;">
+    <!-- <button (click)="showToast()">Show Toast</button> -->
+    <div *ngFor="let n of crosswordSize | range; let i = index" class=" row justify-content-center" >
+        <input (blur)="focusOut($event)" maxlength="1" *ngFor="let n of crosswordSize | range; let j = index" onclick="this.select()" class="m-2 text-center border-dark-subtle" type="text" name="i_{{i}}{{j}}" id="i_{{i}}{{j}}" style="height:45px;width:45px;border-radius:5px;" placeholder="{{i}}{{j}}">
+    </div>
+    <div class="row justify-content-center text-center">
+        <p class="fs-4 text-center">Hints:</p>
+        <ul class="col-4 list-group text-start">
+            <li id="{{word.word_id}}" *ngFor="let word of this.wordData" class="list-group-item">{{word.startRow-1}}{{word.startColumn-1}} &Rarr; {{word.hint}}</li>
+        </ul>
+    </div>
+    <div class="row justify-content-center ">
+        <button (click) = "checkSolutions()" class="col-2 btn btn-outline-dark btn-sm m-5">Check solutions!</button>
+        <button (click) = "saveAnswers()" class="col-2 btn btn-dark btn-sm m-5">Save</button>
+    </div>
+</div>
+<!-- #box{{n}} (click) = "onClick()" -->
